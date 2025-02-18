@@ -23,3 +23,11 @@ compareNumbers(2,1);
 compareNumbers(1,1);
 
 
+const numbers = [1,2,3,4,5];
+
+const multipliedNumbers = numbers.map(num => num * 2);
+console.log("Numbers multiplied by 2:", multipliedNumbers);
+
+const filteredNumbers = numbers.filter(num => num * 2);
+console.log("Numbers greater than 2: ", filteredNumbers);
+
