@@ -66,3 +66,14 @@ console.log(`${street}, ${city}`);
 const updatedUser = {...user, email: "Erkki.Forselius@emaili.com"}
 console.log(updatedUser);
 
+
+const inputField = document.getElementById("userInput");
+const displayButton = document.getElementById("displayButton");
+const outputDiv = document.getElementById("output");
+
+displayButton.addEventListener("click", () => {
+    const userInput = inputField.ariaValueMax;
+
+    outputDiv.textContent = `${userInput}`
+}
+)
