@@ -47,3 +47,22 @@ class Car{
 const car1 = new Car("Ford", "Fiesta", "2018")
 
 console.log(car1.getCarInfo());
+
+
+const user = {
+    nimi: 'Erkki',
+    email: "Erkki@esimerkki.com",
+    address: {
+        street: "Ahventie",
+        city: "Vaasa"
+    }
+};
+
+const{name, email, address: {street,city}} = user;
+console.log(`${nimi}`);
+console.log(`${email}`);
+console.log(`${street}, ${city}`);
+
+const updatedUser = {...user, email: "Erkki.Forselius@emaili.com"}
+console.log(updatedUser);
+
