@@ -31,3 +31,19 @@ console.log("Numbers multiplied by 2:", multipliedNumbers);
 const filteredNumbers = numbers.filter(num => num * 2);
 console.log("Numbers greater than 2: ", filteredNumbers);
 
+
+class Car{
+    constructor(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    getCarInfo(){
+        return `${this.make} ${this.model} ${this.year}`
+    }
+}
+
+const car1 = new Car("Ford", "Fiesta", "2018")
+
+console.log(car1.getCarInfo());
