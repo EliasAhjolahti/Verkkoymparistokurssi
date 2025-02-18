@@ -28,7 +28,7 @@ const numbers = [1,2,3,4,5];
 const multipliedNumbers = numbers.map(num => num * 2);
 console.log("Numbers multiplied by 2:", multipliedNumbers);
 
-const filteredNumbers = numbers.filter(num => num * 2);
+const filteredNumbers = numbers.filter(num => num > 2);
 console.log("Numbers greater than 2: ", filteredNumbers);
 
 
@@ -58,7 +58,7 @@ const user = {
     }
 };
 
-const{name, email, address: {street,city}} = user;
+const{nimi, email, address: {street,city}} = user;
 console.log(`${nimi}`);
 console.log(`${email}`);
 console.log(`${street}, ${city}`);
@@ -67,12 +67,18 @@ const updatedUser = {...user, email: "Erkki.Forselius@emaili.com"}
 console.log(updatedUser);
 
 
+
+
+
+
+
+
 const inputField = document.getElementById("userInput");
 const displayButton = document.getElementById("displayButton");
 const outputDiv = document.getElementById("output");
 
 displayButton.addEventListener("click", () => {
-    const userInput = inputField.ariaValueMax;
+    const userInput = inputField.value;
 
     outputDiv.textContent = `${userInput}`
 }
