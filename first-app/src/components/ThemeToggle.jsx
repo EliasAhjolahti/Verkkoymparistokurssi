@@ -16,7 +16,7 @@ return(
 
     }}
     >
-    <h1>{darkMode ? "Dark Mode" : "LightMode"}</h1>
+    <h1>{darkMode ? "Dark Mode" : "Light Mode"}</h1>
     <button
     onClick={toggleTheme}
     style={{
