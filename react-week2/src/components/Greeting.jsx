@@ -1,9 +1,7 @@
-import NameInput from "./NameInput"
-
-export default function Greeting({NameInput}) {
-    return(
+export default function Greeting({ name }) {
+    return (
         <div className="bordered">
-    <h1>Hello {NameInput}</h1>
-    </div>
-    )
+            <h1>Hello {name ? name : "Guest"}</h1>
+        </div>
+    );
 }
