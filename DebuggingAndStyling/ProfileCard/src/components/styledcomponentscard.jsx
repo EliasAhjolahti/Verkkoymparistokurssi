@@ -48,6 +48,7 @@ export default function Styledcomponentscard(){
       <Heading>Matti Meikäläinen</Heading>
       <Paragraph>Full-stack developer, passionate about coding and coffee</Paragraph>
       <Button>Contact Me</Button>
+      <Paragraph>Created with styled components</Paragraph>
     </Card>
     );
 }
