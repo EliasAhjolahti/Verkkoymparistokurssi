@@ -1,5 +1,6 @@
 import ProfileCard from './components/profilecard'
 import TailwindProfilecard from './components/tailwindProfilecard'
+import Styledcomponentscard from './components/styledcomponentscard'
 import "./index.css"
 
 
@@ -8,6 +9,7 @@ function App() {
     <div>
 <ProfileCard />
 <TailwindProfilecard />
+<Styledcomponentscard />
 </div>
 )
 }
