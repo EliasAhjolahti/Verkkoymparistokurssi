@@ -15,7 +15,9 @@ export default function ProfileCard() {
         textAlign: "center",
       }}
     >
-      <Avatar sx={{ width: 100, height: 100, margin: "auto" }} />
+      <Avatar sx={{ width: 100, height: 100, margin: "auto" }}
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShaG3PuUHQv9LFHhY36Jbolyv0qeS1pKXaew&s"
+      />
       <CardContent>
         <Typography sx={{fontWeight: 'bold'}} variant="h5" >Matti Meikäläinen</Typography>
         <Typography variant="body2" color="text.secondary">
