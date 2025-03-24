@@ -4,7 +4,8 @@ function List() {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
 
   function addItem() {
-    items.push(`Item ${items.length + 1}`); 
+    const newItem = `Item ${items.length + 1}`
+    setItems([...items, newItem]);
   }
 
   return (
