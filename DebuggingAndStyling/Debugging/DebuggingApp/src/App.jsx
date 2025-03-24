@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Counter />
       <List />
-      <UserInfo />
+      <UserInfo  name="Alice" age={35}/>
       <Footer />
     </div>
   );
