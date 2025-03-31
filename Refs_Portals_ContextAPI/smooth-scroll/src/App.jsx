@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import './App.css'
+import BackToTop from './components/BackToTop';
 
 function App() {
 
@@ -43,21 +44,21 @@ function App() {
 
 </nav>
 
-<div id="home" ref={homeRef} className={activeSection === 'home' ? 'active' : ''}>
+<div id="home" ref={homeRef} >
 <h1>home</h1>
 <p>{'home '.repeat(300)}</p>
 </div>
 
-<div id="about" ref={aboutRef} className={activeSection === 'about' ? 'active' : ''}>
+<div id="about" ref={aboutRef} >
 <h1>about</h1>
 <p>{'about '.repeat(300)}</p>
 </div>
 
-<div id="contact" ref={contactRef} className={activeSection === 'contact' ? 'active' : ''}>
+<div id="contact" ref={contactRef} >
 <h1>contact</h1>
 <p>{'contact '.repeat(300)}</p>
 </div>
-
+<BackToTop />
 </div>
   )
 }
