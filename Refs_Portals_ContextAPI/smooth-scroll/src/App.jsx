@@ -1,8 +1,10 @@
-import { useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import './App.css'
 import BackToTop from './components/BackToTop';
+import { ThemeContext } from './contexts/ThemeContext';
 
 function App() {
+  const { state, dispatch } = useContext(ThemeContext);
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -11,7 +13,10 @@ function App() {
 
 
   return (
-    <div>
+    <div className={`app ${state.theme}`}>
+      <button onClick={() => dispatch({ type: 'TOGGLE_THEME'})}>
+        Toggle Theme
+      </button>
 <nav>
 
 <button
