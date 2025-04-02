@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function UserList() {
 const [userData, setUserData] = useState([]);
 const [error, setError] = useState(null);
-
+const [loading, setLoading] = useState(true);
   
     useEffect(() => {
         const fetchUserData = async () => {
@@ -17,15 +17,19 @@ const [error, setError] = useState(null);
             setUserData(data);
           } catch (err) {
             setError(err.message);
+          } finally{
+            setLoading(false);
           }
         };
     
         fetchUserData();
       }, []);
-    
+      
+      if (loading) return <p>Loading user data</p>;
       if (error) return <p>Couldn't fetch data</p>;
-    
-      return (
+      
+
+       return (
         <div>
           <h2>User List</h2>
           <ul>
