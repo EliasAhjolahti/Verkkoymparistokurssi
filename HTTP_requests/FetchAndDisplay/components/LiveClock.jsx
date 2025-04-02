@@ -5,8 +5,13 @@ export default function LiveClock() {
 
 
     useEffect(() => {
+    const interval = setInterval(() => {
     const currentTime = new Date().toLocaleTimeString();
     setTime(currentTime);
+    }, 1000)
+
+
+    return () => clearInterval(interval);
 }, [])
 
     return(
