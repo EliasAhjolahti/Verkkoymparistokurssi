@@ -1,4 +1,5 @@
-export default function TransactionList({ transactions, onDelete }) {
+export default function TransactionList({ transactions, onDelete, currency }) {
+
 
     return (
       <div>
@@ -6,7 +7,7 @@ export default function TransactionList({ transactions, onDelete }) {
         <ul id="transaction-list">
           {transactions.map((tx, index) => (
             <li key={index} className={tx.sum >= 0 ? 'income' : 'expense'}>
-              {tx.description}: €{tx.sum}
+              {tx.description}: {tx.sum} {currency}
               <button onClick={() => onDelete(index)}>Poista</button>
             </li>
           ))}

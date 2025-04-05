@@ -7,7 +7,7 @@ import { useTheme } from './BudgetAppContext';
 import Settings from './components/Settings';
 
 function App() {
-  const { theme } = useTheme();
+  const { theme, currency } = useTheme();
   const [showSettings, setShowSettings] = useState(false);
 
   const [transactions, setTransactions] = useState([]);
@@ -41,14 +41,14 @@ function App() {
   return (
     <>
       <div className={`app-container ${theme}`}>
-        
+
       <div className="balance-box">
-        <h2>Saldo: {saldo.toFixed(2)} €</h2>
+        <h2>Saldo: {saldo.toFixed(2)} {currency}</h2>
       </div>
 
       <TransactionForm onAdd={addTransaction} />
 
-      <TransactionList transactions={transactions} onDelete={requestDelete} />
+      <TransactionList transactions={transactions} onDelete={requestDelete} currency={currency}/>
 
       {showDialog && (
         <Confirmation
@@ -64,6 +64,7 @@ function App() {
       </button>
 
       {showSettings && <Settings onClose={() => setShowSettings(false)} />}
+      
       </div>
     </>
   );
