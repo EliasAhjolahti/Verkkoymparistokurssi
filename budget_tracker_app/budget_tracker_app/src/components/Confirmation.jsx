@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom';
 
 export default function Confirmation({ message, onConfirm, onCancel }) {
   return ReactDOM.createPortal(
-    <div className="confirmation-backdrop">
-      <div className="confirmation-dialog">
+    <div className="confirmation-overlay">
+      <div className="confirmation">
         <p>{message}</p>
         <div className="confirmation-buttons">
           <button onClick={onConfirm}>Confirm</button>
